@@ -481,7 +481,7 @@ function Events() {
                 <div className="event-detail-item event-detail-time">
                   <Clock3 size={18} className="detail-icon" />
                   <div>
-                    <strong>5:00 PM onwards</strong>
+                    <strong>04:00 PM - 06:00 PM</strong>
                   </div>
                 </div>
 
@@ -535,14 +535,14 @@ function Events() {
                 <div className="event-detail-item event-detail-time">
                   <Clock3 size={18} className="detail-icon" />
                   <div>
-                    <strong>4:00 AM – 5:30 AM</strong>
+                    <strong>04:00 AM – 06:00 AM</strong>
                   </div>
                 </div>
 
                 <div className="event-detail-item event-detail-venue">
                   <MapPin size={18} className="detail-icon" />
                   <div>
-                    <p>Arulmigu Sri RajaMurugan Thirukovil, Salem Anai Medu</p>
+                    <p>Arulmigu Sri RajaMurugan Thirukovil, Salem AnaiMedu</p>
                   </div>
                 </div>
               </div>
@@ -589,7 +589,7 @@ function Events() {
                 <div className="event-detail-item event-detail-time">
                   <Clock3 size={18} className="detail-icon" />
                   <div>
-                    <strong>7:00 PM onwards</strong>
+                    <strong>7:00 AM - 11:00 AM</strong>
                   </div>
                 </div>
 
