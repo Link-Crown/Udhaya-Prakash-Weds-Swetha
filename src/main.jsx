@@ -704,7 +704,6 @@ function App() {
           <Events />
           <CenterQuoteHeading />
           <Venue />
-          <Contact />
           <Footer />
         </motion.div>
       )}
