@@ -14,9 +14,6 @@ import {
 import "./styles.css";
 
 import coupleArt from "./assets/couple.jpeg";
-import coupleArt2 from "./assets/couple 2.jpeg";
-import groomArt from "./assets/groom.jpeg";
-import brideArt from "./assets/bride.jpeg";
 import godArt from "./assets/god.jpeg";
 import hallArt from "./assets/wedding hall.jpeg";
 
@@ -452,64 +449,10 @@ function Events() {
         />
       </Reveal>
 
-      {/* Responsive 3-Column Events Grid */}
+      {/* Responsive Events Grid */}
       <div className="events-columns-grid">
-        {/* 1. Engagement Card */}
+        {/* 1. Muhurtham Card (Featured Centerpiece) */}
         <Reveal delay={0.05} className="event-col-wrap">
-          <article className="event-column-card event-card-engagement">
-            <div className="event-card-header">
-              <span className="event-card-tag">Ceremony 1</span>
-              <span className="event-number">01</span>
-            </div>
-
-            <div className="event-card-icon-wrap">
-              <div className="event-card-icon">💍</div>
-            </div>
-
-            <div className="event-card-body">
-              <h3 className="event-card-title">Engagement</h3>
-
-              <div className="event-card-details">
-                <div className="event-detail-item event-detail-date">
-                  <CalendarDays size={18} className="detail-icon" />
-                  <div>
-                    <strong>12 September 2026</strong>
-                    <span className="event-detail-sub">Saturday</span>
-                  </div>
-                </div>
-
-                <div className="event-detail-item event-detail-time">
-                  <Clock3 size={18} className="detail-icon" />
-                  <div>
-                    <strong>04:00 PM - 06:00 PM</strong>
-                  </div>
-                </div>
-
-                <div className="event-detail-item event-detail-venue">
-                  <MapPin size={18} className="detail-icon" />
-                  <div>
-                    <p>Sri Selvi Ponnusamy Gounder Thirumana Mandapam</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="event-card-actions">
-                <a
-                  className="gold-button event-directions-btn"
-                  href={MAPS.mandapam}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Compass size={15} />
-                  <span>View Location</span>
-                </a>
-              </div>
-            </div>
-          </article>
-        </Reveal>
-
-        {/* 2. Muhurtham Card (Featured Centerpiece) */}
-        <Reveal delay={0.15} className="event-col-wrap">
           <article className="event-column-card event-card-muhurtham is-featured">
             <div className="event-card-header">
               <span className="event-card-tag">Sacred Muhurtham</span>
@@ -562,8 +505,8 @@ function Events() {
           </article>
         </Reveal>
 
-        {/* 3. Reception Card */}
-        <Reveal delay={0.25} className="event-col-wrap">
+        {/* 2. Reception Card */}
+        <Reveal delay={0.15} className="event-col-wrap">
           <article className="event-column-card event-card-reception">
             <div className="event-card-header">
               <span className="event-card-tag">Celebration</span>
@@ -636,65 +579,6 @@ function CenterQuoteHeading() {
   );
 }
 
-function Couple() {
-  return (
-    <section id="couple" className="section-shell couple-section">
-      <Reveal><SectionHeading eyebrow="The ones at the heart of it all" title="Meet the couple" /></Reveal>
-      <Reveal className="couple-art" delay={0.1}>
-        <div className="couple-art-frame">
-          <img src={coupleArt2} alt="Illustrated wedding portrait of Udhaya Prakash and Swetha" />
-          <div className="couple-monogram">U <span>&amp;</span> S</div>
-        </div>
-      </Reveal>
-
-      <div className="profile-grid">
-        <Reveal delay={0.05}>
-          <ProfileCard
-            side="groom"
-            image={groomArt}
-            alt="Illustrated portrait of Udhaya Prakash"
-            name="S. Udhaya Prakash"
-            degree="B.E. (Civil)"
-            role="Guidewire Software, Bangalore"
-            family={<>Son of<br /><strong>Thiru. K. Sakthivel &amp; Thirumathi. S. Singaram</strong></>}
-          />
-        </Reveal>
-        <Reveal delay={0.15}>
-          <ProfileCard
-            side="bride"
-            image={brideArt}
-            alt="Illustrated portrait of Swetha"
-            name="S. Swetha"
-            degree="B.Com."
-            role=""
-            family={<>Daughter of<br /><strong>Thiru. P. Sureshkumar &amp; Thirumathi. S. Valli</strong></>}
-          />
-        </Reveal>
-      </div>
-      <div className="between-monogram">U <span>&amp;</span> S</div>
-    </section>
-  );
-}
-
-function ProfileCard({ side, image, alt, name, degree, role, family }) {
-  return (
-    <article className={`profile-card ${side}`}>
-      <div className="profile-photo">
-        <img src={image} alt={alt} />
-        <div className="photo-label">{side === "groom" ? "The Groom" : "The Bride"}</div>
-      </div>
-      <div className="profile-copy">
-        <div className="eyebrow">{side === "groom" ? "Hearts &amp; dreams" : "Grace &amp; joy"}</div>
-        <h3>{name}</h3>
-        <p className="profile-degree">{degree}</p>
-        {role && <p className="profile-role">{role}</p>}
-        <OrnamentalLine className="my-5" />
-        <p className="profile-family">{family}</p>
-      </div>
-    </article>
-  );
-}
-
 function VenueCard({ title, subtitle, tag, image, imageAlt, venueName, map, kind }) {
   return (
     <article className={`venue-card ${kind}`}>
@@ -732,8 +616,8 @@ function Venue() {
           kind="temple"
         />
         <VenueCard
-          title="Engagement & Reception Location"
-          subtitle="12 & 13 September"
+          title="Reception Location"
+          subtitle="13 September"
           tag="Grand Wedding Mandapam"
           image={hallArt}
           imageAlt="Sri Selvi Ponnusamy Gounder Thirumana Mandapam"
@@ -748,9 +632,7 @@ function Venue() {
 
 function Contact() {
   const contacts = [
-    ["Suriya Prasath", "Groom Brother", "9688770052"],
-    ["Udhaya Prakash", "Groom", "9043339798"],
-    ["Nandha Prakash", "Groom Brother", "9384955009"]
+    ["Udhaya Prakash", "Groom", "9043339798"]
   ];
   return (
     <section id="contact" className="section-shell contact-section">
@@ -821,7 +703,6 @@ function App() {
           <Welcome />
           <Events />
           <CenterQuoteHeading />
-          <Couple />
           <Venue />
           <Contact />
           <Footer />

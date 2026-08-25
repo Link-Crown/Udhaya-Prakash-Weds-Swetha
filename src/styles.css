@@ -632,34 +632,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* Distinct Vibrant Colour Schemes for each event */
-/* 1. Engagement Theme (Rose Gold / Warm Coral Rose) */
-.event-card-engagement {
-  border-top: 4px solid var(--rose);
-}
-.event-card-engagement .event-card-tag {
-  background: rgba(214, 51, 132, 0.14);
-  color: var(--rose-dark);
-  border: 1px solid rgba(214, 51, 132, 0.32);
-}
-.event-card-engagement .event-number {
-  color: var(--rose);
-}
-.event-card-engagement .event-card-icon {
-  background: linear-gradient(135deg, #fdf1f5, #fce4ec);
-  color: var(--rose);
-  border: 1.5px solid rgba(214, 51, 132, 0.4);
-}
-.event-card-engagement .event-card-title {
-  color: #9c1d55;
-}
-.event-card-engagement .event-detail-item .detail-icon {
-  color: var(--rose);
-}
-.event-card-engagement .event-detail-date strong {
-  color: var(--rose-dark);
-}
-
-/* 2. Muhurtham Theme (Sacred Royal Maroon & Gold) */
+/* 1. Muhurtham Theme (Sacred Royal Maroon & Gold) */
 .event-card-muhurtham {
   border-top: 5px solid var(--gold);
   background: linear-gradient(180deg, #fffcf7 0%, #ffffff 100%);
@@ -785,58 +758,6 @@ a { color: inherit; text-decoration: none; }
 .quote-orn-line {
   margin: 8px auto;
 }
-
-/* Couple Section */
-.couple-section {
-  overflow: hidden;
-  padding-top: 36px;
-  padding-bottom: 36px;
-}
-.couple-art { max-width: 700px; margin: 32px auto 0; }
-.couple-art-frame {
-  position: relative;
-  padding: 9px;
-  border: 1px solid rgba(201,161,90,.65);
-  background: #fffaf5;
-  box-shadow: 0 25px 70px rgba(81,34,48,.12);
-  border-radius: 12px;
-}
-.couple-art-frame::after { content: ""; position: absolute; inset: 20px; border: 1px solid rgba(201,161,90,.35); pointer-events: none; border-radius: 8px; }
-.couple-art-frame img { display: block; width: 100%; border-radius: 6px; }
-.couple-monogram {
-  position: absolute; z-index: 3; left: 50%; bottom: 17px; transform: translateX(-50%);
-  padding: 5px 16px; min-width: 100px; text-align: center;
-  background: rgba(253,248,243,.93); border: 1px solid rgba(201,161,90,.55);
-  color: var(--wine); font: 600 21px "Cormorant Garamond";
-  border-radius: 6px;
-}
-.couple-monogram span, .between-monogram span { color: var(--gold); font-size: 12px; }
-.profile-grid { display: grid; gap: 25px; margin-top: 36px; }
-.profile-card {
-  display: grid;
-  grid-template-columns: 42% 58%;
-  background: #fffaf5;
-  border: 1px solid rgba(201,161,90,.45);
-  box-shadow: 0 20px 55px rgba(80,32,46,.08);
-  border-radius: 16px;
-  overflow: hidden;
-}
-.profile-photo { position: relative; min-height: 290px; overflow: hidden; }
-.profile-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
-.profile-card.bride .profile-photo img { object-position: center 18%; }
-.photo-label {
-  position: absolute; left: 12px; bottom: 12px;
-  background: rgba(122,31,61,.9); color: #fff7f2;
-  padding: 7px 14px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .15em;
-  border-radius: 20px;
-}
-.profile-copy { padding: 26px 20px; }
-.profile-copy h3 { margin-top: 7px; color: var(--wine); font: 500 36px/1 "Cormorant Garamond"; }
-.profile-degree { margin-top: 5px; color: var(--rose); font-size: 15px; font-weight: 600; }
-.profile-role { margin-top: 5px; color: #635056; font-size: 14px; font-weight: 500; }
-.profile-family { color: #4e3c42; font: 17px/1.65 "Cormorant Garamond"; margin-top: 6px; }
-.profile-family strong { color: var(--wine); font-weight: 600; font-size: 18px; }
-.between-monogram { display: none; }
 
 /* =========================================================================
    VENUE SECTION WITH GOD & WEDDING HALL IMAGES
@@ -997,19 +918,13 @@ a { color: inherit; text-decoration: none; }
   .countdown-grid { grid-template-columns: repeat(4, 1fr); }
   .count-box { min-height: 115px; }
   
-  .profile-grid { grid-template-columns: 1fr 1fr; align-items: start; }
-  .profile-card { grid-template-columns: 1fr; }
-  .profile-photo { height: 360px; }
-  .profile-copy { padding: 30px; text-align: center; }
-  .profile-copy .orn-line { margin-inline: auto; }
-  
   .venue-grid { grid-template-columns: 1fr 1fr; }
-  .contact-grid { grid-template-columns: repeat(3, 1fr); }
+  .contact-grid { grid-template-columns: 1fr; }
 }
 
 @media (min-width: 960px) {
   .events-columns-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1017,17 +932,6 @@ a { color: inherit; text-decoration: none; }
   .section-shell { padding-top: 56px; padding-bottom: 56px; }
   .hero-section { min-height: 94vh; }
   .hero-inner { gap: 60px; }
-  .profile-card { grid-template-columns: 43% 57%; min-height: 400px; }
-  .profile-photo { height: auto; min-height: 400px; }
-  .profile-copy { text-align: left; padding: 40px 32px; }
-  .profile-copy .orn-line { margin-left: 0; }
-  .between-monogram {
-    display: grid; position: absolute; left: 50%; bottom: 275px; transform: translateX(-50%);
-    width: 68px; height: 68px; place-items: center; border-radius: 50%;
-    background: var(--wine); border: 1px solid var(--gold); color: #fff;
-    font: 600 21px "Cormorant Garamond"; z-index: 5;
-  }
-  .between-monogram span { color: var(--gold); }
 }
 
 @media (max-width: 390px) {
